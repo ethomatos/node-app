@@ -1,0 +1,12 @@
+services:
+  app:
+    image: ethomatos/node-app:latest
+    build:
+      context: .
+    environment:
+      - DD_ENV=dev
+      - DD_SERVICE=wyndham_test
+      - DD_VERSION=1.0.0
+      - DD_AGENT_HOST=dd-agent
+    ports:
+      - "3000:3000"
